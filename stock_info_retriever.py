@@ -22,9 +22,9 @@ def get_stock_info(url):
     return result
 
 
-url_list = gen_url('stock_code.txt')
-
-example_url = url_list[0]
-print(get_stock_info(example_url))
 # with open('result.txt', mode='w', encoding='utf-8') as fd:
 #     fd.write("%s" % get_stock_info(example_url))
+if __name__ == '__main__':
+    url_list = gen_url('stock_code.txt')
+    for i in url_list:
+        print(get_stock_info(i))
